@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compaktor</title>
+    <style>
+        *{
+            font-family: system-ui;
+            color: black;
+        }
+        .centerdiv{
+            margin: 50px auto;
+            width: 600px;
+            height: 600px;
+            position: relative;
+        }
+        .content{
+            /*margin-top:2%;*/
+            border: 1px solid #ccc;
+            padding: 8%;
+            font-size: 16px;
+            font-family: system-ui;
+            font-weight: 500px;
+            border-radius: 10px;
+        }
+        .imageborder{
+            position: relative;
+            top: 22px;
+        }
+        .button {
+            background-color: #1060fc; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        a{
+            color: #0321ee;
+        }
+        .link{
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="centerdiv">
+    <div>
+        <img  width="150px" height="85px" alt="compaktor logo" th:src="@{https://backend.compaktor.app/resources/compaktorGatewayImages/compaktor.png}">
+    </div>
+    <div class="content">
+
+     <!--   <p th:text="#{email.activation.greeting(${user.firstName})}" th:attr="dir=#{direction}">Dear ,</p>
+        <hr>-->
+
+        <span th:text="#{email.activation.greeting(${user.getFirstName()})}" th:attr="dir=#{direction}"></span>
+        <span th:text="${user.getLastName()}" th:attr="dir=#{direction}"></span>
+
+
+        <p th:text="#{email.sendpdf.text1}">following your subscription to COMPAKTOR, an invoice has been sent to you by email. Check it please.</p>
+        <p th:text="#{email.sendpdf.text2(${invoice.date})}">Date:</p>
+        <p th:text="#{email.sendpdf.text3(${invoice.totalAPayer})}">Total:</p>
+        <strong><span th:text="#{email.send.pdf(${invoice.getPdf()})}" style="color: #1060fc">Pdf</span></strong>
+
+        <br>
+        <p>+216 21 636 339 / 73 900 850 - Email: <a href="compaktor.info@gmail.com">compaktor.info@gmail.com</a></p>
+    </div>
+</div>
+<hr>
+<div class="centerdiv" style="margin: 0 auto ; font-size: 12px;">
+    2021 Maps IT. All rights reserved.
+</div>
+
+</body>
+</html>
