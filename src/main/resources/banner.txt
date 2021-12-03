@@ -1,6 +1,0 @@
-${AnsiColor.GREEN}              _____  _____ ___  ___${AnsiColor.RED}______   ___   _   __ _____  _____ ______
-${AnsiColor.GREEN}             /  __ \|  _  ||  \/  |${AnsiColor.RED}| ___ \ / _ \ | | / /|_   _||  _  || ___ \
-${AnsiColor.GREEN}             | /  \/| | | || .  . |${AnsiColor.RED}| |_/ // /_\ \| |/ /   | |  | | | || |_/ /
-${AnsiColor.GREEN}             | |    | | | || |\/| |${AnsiColor.RED}|  __/ |  _  ||    \   | |  | | | ||    /
-${AnsiColor.GREEN}             | \__/\\ \_/ /| |  | |${AnsiColor.RED}| |    | | | || |\  \  | |  \ \_/ /| |\ \
-${AnsiColor.GREEN}              \____/ \___/ \_|  |_/${AnsiColor.RED}\_|    \_| |_/\_| \_/  \_/   \___/ \_| \_|
