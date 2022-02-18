@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compaktor</title>
+    <style>
+        *{
+            font-family: system-ui;
+            color: black;
+        }
+        .centerdiv{
+            margin: 50px auto;
+            width: 600px;
+            height: 600px;
+            position: relative;
+        }
+        .content{
+            /*margin-top:2%;*/
+            border: 1px solid #ccc;
+            padding: 8%;
+            font-size: 16px;
+            font-family: system-ui;
+            font-weight: 500px;
+            border-radius: 10px;
+        }
+        .imageborder{
+            position: relative;
+            top: 22px;
+        }
+        .button {
+            background-color: #1060fc; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        a{
+            color: #0321ee;
+        }
+        .link{
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="centerdiv">
+    <div>
+        <img  width="150px" height="85px" alt="compaktor logo" th:src="@{https://backend.compaktor.app/resources/compaktorGatewayImages/compaktor.png}">
+    </div>
+    <div class="content">
+
+        <p>
+            <span th:text="#{email.activation.greeting(${billOperation.getTiers().getIntitule()})}" th:attr="dir=#{direction}"></span>
+        </p>
+
+        <strong><P th:text="#{email.send.pdf(${billOperation.getPdf()})}" style="color: #1060fc">Pdf</P></strong>
+
+    </div>
+</div>
+<hr>
+<div class="centerdiv" style="margin: 0 auto ; font-size: 12px;">
+    Ce mail est délivré par le système d'information Compaktor. Tél: 73 900 850
+</div>
+
+</body>
+</html>
